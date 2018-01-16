@@ -10,7 +10,8 @@ Currently, this tool analyzes the [tutorial videos](https://helpx.adobe.com/crea
 
 ### Demo Video
 <img src="https://media.giphy.com/media/l49JD9VXlMwgcOA5a/giphy.gif" width="680px">
-Launch the tool just by typing `python annotation-tool`
+Launch the tool just by typing `python annotation-tool.py`
+
 ### Features
 - Playlist/ Basic video player features
 - Script box
@@ -31,8 +32,8 @@ I highly recommend you to use *virtualenv* to install Python libraries!
 ## video-annotation-tool
 
 ### `video_crawling.py`
-This code crawls and downloads [Adove tutorial videos](https://helpx.adobe.com/creative-cloud/tutorials-explore.html).
-Total 25 videos are downloaded from 9 threads in the tutorial website.
+This code crawls and downloads [Adobe tutorial videos](https://helpx.adobe.com/creative-cloud/tutorials-explore.html).
+In total, 25 videos are downloaded from 9 articles in the tutorial website.
 
 ### `annotation-tool.py`
 `python annotation-tool.py` executes the GUI annotator. 
@@ -46,7 +47,7 @@ Converts video(.mp4) to audio(.wav) for speech recognition.
 with given input audio file of one video, it outputs *video_0_0_x.wav* where x denotes starting time of sentences in seconds.
 This splits an audio file to a sentence-level, in order to map sentence text to appropriate time. 
 
-*note: it may take a while.*
+*note: it may take some time.*
 
 ### `audio_to_script.py`
 output: video_0_0_x.txt or video_0_0.txt
@@ -56,14 +57,14 @@ This code converts audio to text using the Speech Recognition API from Microsoft
 Also, in the code, you should **change the `MS_SPEECH_API_KEY` parameter with your own key**.
 To get the API key, go to the [Microsoft Azure Portal Resources](https://portal.azure.com/) page, go to "All Resources" > "Add" > "See All" > Search "Bing Speech API > "Create", and fill in the form to make a "Bing Speech API" resource. On the resulting page (which is also accessible from the "All Resources" page in the Azure Portal), go to the "Show Access Keys" page, which will have two API keys, either of which can be used for the key parameter.
 
-*note: it may take a while, and sometimes failes due to network connection issues.*
+*note: it may take some time, and sometimes failes due to the network connection issue.*
 
-### video_to_images.py
+### `video_to_images.py`
 output: video_0_0/video_0_0_1.png
 
 Extract one representative image for each second in a video. We extract informations from this image.
 
-### extract_frame_info.py
+### `extract_frame_info.py`
 output: frames/video_0_0.csv
 dependency: `image_diff.py` / `image_to_text.py`
 
