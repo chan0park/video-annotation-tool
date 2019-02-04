@@ -62,7 +62,7 @@ def entire_videos_to_script(MS_SPEECH_API_KEY, video_dir='./videos/', script_dir
             file.write(script)
 
 if __name__ == "__main__":
-    MS_SPEECH_API_KEY = "d96401fa16364eb4ab11b685fe7ebd3c"
+    MS_SPEECH_API_KEY = "yourKeyForBingSpeechApi"
     if args["mode"] == "both":
         sentence_audios_to_script(MS_SPEECH_API_KEY, start_index=8)
         entire_videos_to_script(MS_SPEECH_API_KEY)
